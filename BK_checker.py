@@ -42,6 +42,6 @@ for key,value in count.items():
 
 
 #запись количества в файл
-with open(f"result{get_datatime()}.txt", "w") as file:
+with open(f"result_{get_datatime()}.txt", "w") as file:
     for key, value in count.items():
         file.write(f"{key} : {value}\n")
