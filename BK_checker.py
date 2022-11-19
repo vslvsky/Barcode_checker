@@ -37,9 +37,6 @@ count = collections.Counter()
 for word in barcode_list:
     count[word] += 1
 
-for key,value in count.items():
-    print(key, ':', value)
-
 
 #запись количества в файл
 with open(f"result_{get_datatime()}.txt", "w") as file:

@@ -17,14 +17,14 @@ while i != "stop":
     i = barcode
     #print(barcode_list)
 
+
+#подсчет количества баркодов
 count = collections.Counter()
 for word in barcode_list:
     count[word] += 1
 
-now = get_datatime()
 
-with open(f"result{now}.txt", "w") as file:
-    file.write(str(count))
-
-#print(count)
-
+#запись количества в файл
+with open(f"result_{get_datatime()}.txt", "w") as file:
+    for key, value in count.items():
+        file.write(f"{key} : {value}\n")
